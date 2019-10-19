@@ -1,6 +1,8 @@
 <h3>Shipping Prices</h3>
-
-<div class="shipping-item" *ngFor="let shipping of shippingCosts | async"> <!-- instead of subscribe -->
-  <span>{{ shipping.type }}</span>
-  <span>{{ shipping.price | currency }}</span>
+<div *ngIf="!shippingCosts">
+  Loading...
+</div>
+<div class="shipping-item" *ngFor="let shipping of shippingCosts">
+	<span>{{ shipping.type }}</span>
+	<span>{{ shipping.price | currency }}</span>
 </div>
