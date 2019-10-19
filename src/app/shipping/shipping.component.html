@@ -1,8 +1,9 @@
 <h3>Shipping Prices</h3>
 <div *ngIf="!shippingCosts">
-  Loading...
+  <img src="/assets/images/loading.gif">
 </div>
 <div class="shipping-item" *ngFor="let shipping of shippingCosts">
 	<span>{{ shipping.type }}</span>
 	<span>{{ shipping.price | currency }}</span>
 </div>
+<img src="assets/images/loading.gif">
